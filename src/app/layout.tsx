@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { TRPCReactProvider } from "@/trpc/client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,7 +15,7 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: "FlowNexus - theBappy",
-  description: `FlowNexus is an intelligent automation platform that connects your apps, data, and workflows into one unified ecosystem. With FlowNexus, anyone—from developers to teams—can design, automate, and scale powerful workflows without writing complex code. It&apos;s where automation meets connection — your central nexus for effortless productivity.`
+  description: `FlowNexus is an intelligent automation platform that connects your apps, data, and workflows into one unified ecosystem. With FlowNexus, anyone—from developers to teams—can design, automate, and scale powerful workflows without writing complex code. It&apos;s where automation meets connection — your central nexus for effortless productivity.`,
 };
 
 export default function RootLayout({
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <TRPCReactProvider>{children}</TRPCReactProvider>
       </body>
     </html>
   );
