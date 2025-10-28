@@ -1,25 +1,50 @@
-import prisma from "@/lib/db";
 import { inngest } from "./client";
+import { createGoogleGenerativeAI } from "@ai-sdk/google";
+import { generateText } from "ai";
+import { createOpenAI } from "@ai-sdk/openai";
+import { createAnthropic } from "@ai-sdk/anthropic";
 
-export const helloWorld = inngest.createFunction(
-  { id: "hello-world" },
-  { event: "test/hello.world" },
+const google = createGoogleGenerativeAI();
+const openai = createOpenAI();
+const anthropic = createAnthropic();
+
+export const executeAI = inngest.createFunction(
+  { id: "execute-ai" },
+  { event: "execute/ai" },
   async ({ event, step }) => {
-    //fetching
-    await step.sleep("fetching", "5s");
+    await step.sleep("pretend", "3s");
 
-    //transcribing
-    await step.sleep("transcribing", "10s");
-
-    //sending to AI
-    await step.sleep("sending-to-ai", "10s");
-
-    await step.run("create-workflow", () => {
-      return prisma.workflow.create({
-        data: {
-          name: "workflow-from-inngest",
-        },
-      });
-    });
+    const { steps: geminiSteps } = await step.ai.wrap(
+      "gemini-generate-text",
+      generateText,
+      {
+        model: google("gemini-2.5-flash"),
+        system: "You are a helpful assistant",
+        prompt: "What is the newton's 3rd law?",
+      }
+    );
+    const { steps: openaiSteps } = await step.ai.wrap(
+      "gemini-generate-text",
+      generateText,
+      {
+        model: openai("gpt-4"),
+        system: "You are a helpful assistant",
+        prompt: "What is the newton's 3rd law?",
+      }
+    );
+    const { steps: anthropicSteps } = await step.ai.wrap(
+      "gemini-generate-text",
+      generateText,
+      {
+        model: anthropic("claude-sonnet-4-5"),
+        system: "You are a helpful assistant",
+        prompt: "What is the newton's 3rd law?",
+      }
+    );
+    return {
+      geminiSteps,
+      openaiSteps,
+      anthropicSteps,
+    };
   }
 );
