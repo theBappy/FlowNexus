@@ -1,0 +1,27 @@
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("C:\\Users\\User\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("C:\\Users\\User\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+WARN [mprocs::app] Ignore input event: FocusLost
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+WARN [mprocs::app] Ignore input event: FocusGained
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run inngest:dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [portable_pty::win::psuedocon] CreateProcessW `"F:\\npm-global\\npm run dev\0"` in cwd `Some("G:\\Desktop\\automate-task\0")` failed: %1 is not a valid Win32 application. (os error 193)
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
+ERROR [mprocs::error] Error: channel closed
