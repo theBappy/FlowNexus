@@ -21,6 +21,10 @@ const Page = () => {
     onSuccess: () => {
         toast.success("AI Job queued");
       },
+
+    onError: () => {
+      toast.error("Something went wrong")
+    }
   }));
   return (
     <div className="min-h-screen min-w-screen flex items-center justify-center flex-col gap-y-6">
