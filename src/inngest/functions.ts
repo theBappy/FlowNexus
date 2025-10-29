@@ -3,6 +3,7 @@ import { createGoogleGenerativeAI } from "@ai-sdk/google";
 import { generateText } from "ai";
 import { createOpenAI } from "@ai-sdk/openai";
 import { createAnthropic } from "@ai-sdk/anthropic";
+import * as Sentry from "@sentry/nextjs";
 
 const google = createGoogleGenerativeAI();
 const openai = createOpenAI();
@@ -14,6 +15,13 @@ export const executeAI = inngest.createFunction(
   async ({ event, step }) => {
     await step.sleep("pretend", "3s");
 
+    Sentry.logger.info("User triggered test log", {
+      log_source: "sentry_test",
+    });
+
+    console.warn("Something is missing");
+    console.error("This is an error, i want to track the errors.");
+
     const { steps: geminiSteps } = await step.ai.wrap(
       "gemini-generate-text",
       generateText,
@@ -21,6 +29,11 @@ export const executeAI = inngest.createFunction(
         model: google("gemini-2.5-flash"),
         system: "You are a helpful assistant",
         prompt: "What is the newton's 3rd law?",
+        experimental_telemetry: {
+          isEnabled: true,
+          recordInputs: true,
+          recordOutputs: true,
+        },
       }
     );
     const { steps: openaiSteps } = await step.ai.wrap(
@@ -30,6 +43,11 @@ export const executeAI = inngest.createFunction(
         model: openai("gpt-4"),
         system: "You are a helpful assistant",
         prompt: "What is the newton's 3rd law?",
+        experimental_telemetry: {
+          isEnabled: true,
+          recordInputs: true,
+          recordOutputs: true,
+        },
       }
     );
     const { steps: anthropicSteps } = await step.ai.wrap(
@@ -39,6 +57,11 @@ export const executeAI = inngest.createFunction(
         model: anthropic("claude-sonnet-4-5"),
         system: "You are a helpful assistant",
         prompt: "What is the newton's 3rd law?",
+        experimental_telemetry: {
+          isEnabled: true,
+          recordInputs: true,
+          recordOutputs: true,
+        },
       }
     );
     return {
