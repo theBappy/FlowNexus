@@ -9,6 +9,7 @@
         "procs",
         "taskflow",
         "turbopack",
-        "vaul"
+        "vaul",
+        "xyflow"
     ]
 }
