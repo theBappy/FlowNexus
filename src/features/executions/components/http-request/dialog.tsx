@@ -160,10 +160,10 @@ export const HttpRequestDialog = ({
                     <FormControl>
                       <Textarea
                         placeholder={`{
-  "userId": "{{httpResponse.data.id}}",
-  "items": ["item1", "item2"],
-  "name": "{{httpResponse.data.name}}"
-}`}
+                          "userId": "{{httpResponse.data.id}}",
+                          "items": ["item1", "item2"],
+                          "name": "{{httpResponse.data.name}}"
+                        }`}
                         className="min-h-[120px] font-mono text-sm"
                         {...field}
                       />
