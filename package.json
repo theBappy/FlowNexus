@@ -9,6 +9,7 @@
     "lint": "biome check",
     "format": "biome format --write",
     "inngest:dev": "inngest-cli dev",
+    "ngrok:dev": "ngrok http --url=witty-wasp-amazingly.ngrok-free.app 3000",
     "dev:all": "npm-run-all --parallel dev inngest:dev"
   },
   "dependencies": {

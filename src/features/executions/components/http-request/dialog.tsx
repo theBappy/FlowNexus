@@ -34,17 +34,17 @@ import { Button } from "@/components/ui/button";
 
 const formSchema = z.object({
   variableName: z
-  .string()
-  .min(1, {message: "Variable name is required"})
-  .regex(/^[A-Za-z_$][A-Za-z0-9_$]*$/, {
-    message: "Variable name must start with a letter or underscore and contain only letters, numbers, and underscores"
-  }),
-  endpoint: z.url({ message: "Please enter a valid URL" }),
+    .string()
+    .min(1, { message: "Variable name is required" })
+    .regex(/^[A-Za-z_$][A-Za-z0-9_$]*$/, {
+      message:
+        "Variable name must start with a letter or underscore and contain only letters, numbers, and underscores",
+    }),
+  endpoint: z.string().min(1, { message: "Please enter a valid URL" }),
   method: z.enum(["GET", "POST", "PUT", "PATCH", "DELETE"]),
   body: z.string().optional(),
   // .refine() TODO JSON5,
 });
-
 
 export type HttpRequestFormValues = z.infer<typeof formSchema>;
 
@@ -113,13 +113,10 @@ export const HttpRequestDialog = ({
                 <FormItem>
                   <FormLabel>Variable Name</FormLabel>
                   <FormControl>
-                    <Input
-                      placeholder="myApiCall"
-                      {...field}
-                    />
+                    <Input placeholder="myApiCall" {...field} />
                   </FormControl>
                   <FormDescription>
-                    Use this name to reference the result in other nodes: {" "}
+                    Use this name to reference the result in other nodes:{" "}
                     {`{{${watchVariableName}.httpResponse.data}}`}
                   </FormDescription>
                   <FormMessage />
