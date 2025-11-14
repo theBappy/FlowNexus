@@ -39,7 +39,7 @@ export const anthropicExecutor: NodeExecutor<AnthropicData> = async ({
         status: "error",
       })
     );
-    throw new NonRetriableError("OpenAI node: Variable name is missing");
+    throw new NonRetriableError("Anthropic node: Variable name is missing");
   }
 
   if (!data.userPrompt) {
@@ -49,7 +49,7 @@ export const anthropicExecutor: NodeExecutor<AnthropicData> = async ({
         status: "error",
       })
     );
-    throw new NonRetriableError("OpenAI node: User prompt is missing");
+    throw new NonRetriableError("Anthropic node: User prompt is missing");
   }
 
   //todo: if credentials is missing
