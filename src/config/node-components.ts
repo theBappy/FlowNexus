@@ -5,6 +5,9 @@ import { GoggleFormTrigger } from "@/features/triggers/components/google-form-tr
 import { NodeType } from "@/generated/prisma";
 import type { NodeTypes } from "@xyflow/react";
 import { StripeTriggerNode } from "../features/triggers/components/stripe-trigger/node";
+import { GeminiNode } from "../features/executions/components/gemini/node";
+import { OpenAiNode } from "../features/executions/components/openai/node";
+import { AnthropicNode } from "@/features/executions/components/anthropic/node";
 
 export const nodeComponents = {
   [NodeType.INITIAL]: InitialNode,
@@ -12,6 +15,9 @@ export const nodeComponents = {
   [NodeType.MANUAL_TRIGGER]: ManualTriggerNode,
   [NodeType.GOOGLE_FORM_TRIGGER]: GoggleFormTrigger,
   [NodeType.STRIPE_TRIGGER]: StripeTriggerNode,
+  [NodeType.GEMINI]: GeminiNode,
+  [NodeType.OPENAI]: OpenAiNode,
+  [NodeType.ANTHROPIC]: AnthropicNode,
 } as const satisfies NodeTypes;
 
 export type RegisterNodeType = keyof typeof nodeComponents;
