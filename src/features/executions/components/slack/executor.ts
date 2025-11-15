@@ -58,7 +58,7 @@ export const slackExecutor: NodeExecutor<SlackData> = async ({
       }
       await ky.post(data.webhookUrl, {
         json: {
-          text: content, //the key depends on workflow config
+          content: content, //the key depends on workflow config
         },
       });
       if (!data.variableName) {
