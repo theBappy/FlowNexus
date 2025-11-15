@@ -1,4 +1,5 @@
 import { requireAuth } from "@/lib/auth-utils";
+import { CredentialForm } from "@/features/credentials/components/credential-form";
 
 const Page = async () => {
   requireAuth();
