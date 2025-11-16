@@ -50,7 +50,7 @@ const credentialTypeOptions = [
   {
     value: CredentialType.OPENAI,
     label: "OpenAI",
-    logo: "/openai.svg",
+    logo: "/openai-1.svg",
   },
   {
     value: CredentialType.GEMINI,

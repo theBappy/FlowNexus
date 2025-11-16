@@ -115,7 +115,7 @@ export const CredentialsEmpty = () => {
 
 const credentialLogos: Record<CredentialType, string> = {
   [CredentialType.GEMINI]: "/gemini.svg",
-  [CredentialType.OPENAI]: "/openai.svg",
+  [CredentialType.OPENAI]: "/openai-1.svg",
   [CredentialType.ANTHROPIC]: "/anthropic.svg",
 };
 
@@ -125,7 +125,7 @@ export const CredentialItem = ({ data }: { data: Credential }) => {
     removeCredential.mutate({ id: data.id });
   };
 
-  const logo = credentialLogos[data.type] || "/openai.svg";
+  const logo = credentialLogos[data.type] || "/openai-1.svg";
 
   return (
     <EntityItem
