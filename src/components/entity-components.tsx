@@ -31,7 +31,7 @@ import {
 type EntityHeaderProps = {
   title: string;
   description?: string;
-  newButtonLabel: string;
+  newButtonLabel?: string;
   disabled?: boolean;
   isCreating?: boolean;
 } & (
@@ -267,18 +267,18 @@ export const EntityItem = ({
   isRemoving,
   className,
 }: EntityItemProps) => {
-  const handleRemove = async(e: React.MouseEvent) => {
-    e.preventDefault()
-    e.stopPropagation()
+  const handleRemove = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
 
-    if(isRemoving){
+    if (isRemoving) {
       return;
     }
 
-    if(onRemove){
-      await onRemove() 
+    if (onRemove) {
+      await onRemove();
     }
-  }
+  };
   return (
     <Link href={href} prefetch>
       <Card
