@@ -13,6 +13,9 @@
 <img width="643" height="309" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/6336d1f0-ecae-4233-99de-9620475b6f31" />
 
 
+<h2>🏃‍♂️ Let's try yourself 🏃‍♂️</h2>
+[[demo-recorder.webm](https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889)](https://flow-nexus.vercel.app/)
+
 
 <!-- Architecture Diagram -->
 <h2>🏗️ System Architecture</h2>
@@ -249,6 +252,7 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
 
 
