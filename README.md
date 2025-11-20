@@ -32,7 +32,7 @@ flowchart LR
   <tr style="background:#fff3e6;">
     <td>⚙️ Backend</td>
     <td>- tRPC Router<br>- Better Auth<br>- Polar Payments<br>- Webhook Handlers<br>- HTTP Node Handler</td>
-    <td>tRPC → Auth / Payments / Webhooks / HTTP Node<br>→ Prisma → Neon<br>→ OpenAI / Claude / Gemini<br>→ Sentry</td>
+    <td>tRPC → Auth / Payments / Webhooks / HTTP Node<br>→ Prisma → Neon<br>→ OpenAI / Anthropic / Gemini<br>→ Sentry</td>
   </tr>
 
   <tr style="background:#f3e8ff;">
@@ -242,6 +242,7 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
 
 
