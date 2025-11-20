@@ -212,6 +212,8 @@ Test using local Inngest dev server
 
 Push → CodeRabbit reviews your PR
 
+<img width="195" height="472" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/3a754813-3080-483c-87b8-99e6d4e2e15f" />
+
 🛡️ Security
 
 JWT-free, session-based authentication
@@ -238,6 +240,7 @@ CodeRabbit for automated PR reviews
 Conventional commits
 
 Clean code requirements
+
 
 
 
