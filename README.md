@@ -7,6 +7,11 @@
 </td> <td><img src="https://img.shields.io/badge/Better%20Auth-000000"/></td> </tr> </table> <br/>
 <!-- Features Table -->
 <h2>✨ Features</h2> <table> <tr> <td>🔄 Visual workflow builder</td> <td>🎨 React Flow canvas</td> </tr> <tr> <td>🎯 Trigger nodes (Webhook, Google Form, Stripe, Manual)</td> <td>💬 Messaging nodes (Discord, Slack)</td> </tr> <tr> <td>🤖 AI integrations (OpenAI, Claude, Gemini)</td> <td>🌐 HTTP request node</td> </tr> <tr> <td>⚡ Background job execution (Inngest)</td> <td>💳 Polar payments & subscriptions</td> </tr> <tr> <td>🔐 Better Auth authentication</td> <td>🗄️ Prisma + Neon Postgres</td> </tr> <tr> <td>🔒 End-to-end type safety (TypeScript + tRPC)</td> <td>🐛 Sentry error tracking + AI monitoring</td> </tr> <tr> <td>🧑‍💻 CodeRabbit PR reviews</td> <td>🌐 Next.js 15 App Router</td> </tr> </table> <br/>
+
+<h2>👁‍🗨 Demo Preview  👁‍🗨</h2>
+[demo-recorder.webm](https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889)
+
+
 <!-- Architecture Diagram -->
 <h2>🏗️ System Architecture</h2>
 flowchart LR
@@ -242,6 +247,7 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
 
 
