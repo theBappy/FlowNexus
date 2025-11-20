@@ -9,122 +9,202 @@
 <!-- Architecture Diagram -->
 <h2>🏗️ System Architecture</h2>
 flowchart LR
+<table border="1" cellpadding="8" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; width: 100%;">
+  <tr style="background:#222; color:white;">
+    <th>Group</th>
+    <th>Components</th>
+    <th>Connections</th>
+  </tr>
 
-subgraph Client["🖥️ Client (Browser)"]
-    UI["Next.js UI"]
-    Canvas["React Flow Canvas"]
-    AuthUI["Better Auth UI"]
-end
+  <tr style="background:#e8f1ff;">
+    <td>🖥️ Client (Browser)</td>
+    <td>- Next.js UI<br>- React Flow Canvas<br>- Better Auth UI</td>
+    <td>→ UI → Canvas<br>→ AuthUI<br>→ Actions / tRPC Client</td>
+  </tr>
 
-subgraph Frontend["🌐 Frontend"]
-    Actions["Server Actions"]
-    TRPCClient["tRPC Client"]
-end
+  <tr style="background:#e8ffed;">
+    <td>🌐 Frontend</td>
+    <td>- Server Actions<br>- tRPC Client</td>
+    <td>UI → Actions<br>UI → tRPC Client → tRPC Router<br>→ Sentry</td>
+  </tr>
 
-subgraph Backend["⚙️ Backend"]
-    TRPC["tRPC Router"]
-    Auth["Better Auth"]
-    Payments["Polar"]
-    Webhooks["Webhook Handlers"]
-    HTTPNode["HTTP Node Handler"]
-end
+  <tr style="background:#fff3e6;">
+    <td>⚙️ Backend</td>
+    <td>- tRPC Router<br>- Better Auth<br>- Polar Payments<br>- Webhook Handlers<br>- HTTP Node Handler</td>
+    <td>tRPC → Auth / Payments / Webhooks / HTTP Node<br>→ Prisma → Neon<br>→ OpenAI / Claude / Gemini<br>→ Sentry</td>
+  </tr>
 
-subgraph AI["🤖 AI Providers"]
-    OpenAI["OpenAI"]
-    Claude["Claude"]
-    Gemini["Gemini"]
-end
+  <tr style="background:#f3e8ff;">
+    <td>🤖 AI Providers</td>
+    <td>- OpenAI<br>- Claude<br>- Gemini</td>
+    <td>tRPC → AI Providers</td>
+  </tr>
 
-subgraph Jobs["⚡ Inngest Jobs"]
-    Inngest["Inngest Functions"]
-end
+  <tr style="background:#fff9db;">
+    <td>⚡ Inngest Jobs</td>
+    <td>- Inngest Functions</td>
+    <td>Webhooks / Payments / HTTPNode → Inngest<br>Inngest → Prisma / Neon</td>
+  </tr>
 
-subgraph DB["🗄️ Database"]
-    Prisma["Prisma ORM"]
-    Neon["Neon Serverless Postgres"]
-end
+  <tr style="background:#f7efe8;">
+    <td>🗄️ Database</td>
+    <td>- Prisma ORM<br>- Neon Serverless Postgres</td>
+    <td>tRPC / Inngest → Prisma → Neon</td>
+  </tr>
 
-subgraph Monitoring["🔒 QA"]
-    Sentry["Sentry"]
-    CodeRabbit["CodeRabbit Reviews"]
-end
+  <tr style="background:#ffe8e8;">
+    <td>🔒 Monitoring / QA</td>
+    <td>- Sentry<br>- CodeRabbit Reviews</td>
+    <td>Backend → Sentry<br>Frontend → Sentry<br>CodeRabbit → Backend</td>
+  </tr>
+</table>
 
-Client --> UI --> Canvas
-Client --> AuthUI
+<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; font-family: sans-serif;">
 
-UI --> Actions
-UI --> TRPCClient --> TRPC
+  <div style="background:#e8f1ff; padding:16px; border-radius:8px;">
+    <h3>🖥️ Client (Browser)</h3>
+    <ul>
+      <li>Next.js UI</li>
+      <li>React Flow Canvas</li>
+      <li>Better Auth UI</li>
+    </ul>
+  </div>
 
-Actions --> TRPC
-TRPC --> Auth
-TRPC --> Payments
-TRPC --> Webhooks
-TRPC --> HTTPNode
+  <div style="background:#e8ffed; padding:16px; border-radius:8px;">
+    <h3>🌐 Frontend</h3>
+    <ul>
+      <li>Server Actions</li>
+      <li>tRPC Client</li>
+    </ul>
+  </div>
 
-TRPC --> Prisma --> Neon
+  <div style="background:#fff3e6; padding:16px; border-radius:8px;">
+    <h3>⚙️ Backend</h3>
+    <ul>
+      <li>tRPC Router</li>
+      <li>Better Auth</li>
+      <li>Polar Payments</li>
+      <li>Webhooks</li>
+      <li>HTTP Node Handler</li>
+    </ul>
+  </div>
 
-Webhooks --> Inngest
-Payments --> Inngest
-HTTPNode --> Inngest
+  <div style="background:#f3e8ff; padding:16px; border-radius:8px;">
+    <h3>🤖 AI Providers</h3>
+    <ul>
+      <li>OpenAI</li>
+      <li>Claude</li>
+      <li>Gemini</li>
+    </ul>
+  </div>
 
-Inngest --> Prisma
-Inngest --> Neon
+  <div style="background:#fff9db; padding:16px; border-radius:8px;">
+    <h3>⚡ Inngest Jobs</h3>
+    <ul>
+      <li>Inngest Functions</li>
+    </ul>
+  </div>
 
-TRPC --> OpenAI
-TRPC --> Claude
-TRPC --> Gemini
+  <div style="background:#f7efe8; padding:16px; border-radius:8px;">
+    <h3>🗄️ Database</h3>
+    <ul>
+      <li>Prisma ORM</li>
+      <li>Neon Postgres</li>
+    </ul>
+  </div>
 
-Backend --> Sentry
-Frontend --> Sentry
-CodeRabbit -.-> Backend
+  <div style="background:#ffe8e8; padding:16px; border-radius:8px;">
+    <h3>🔒 Monitoring / QA</h3>
+    <ul>
+      <li>Sentry</li>
+      <li>CodeRabbit Reviews</li>
+    </ul>
+  </div>
+
+</div>
+
 
 <br/>
 <!-- Getting Started -->
 <h2>📦 Getting Started</h2> <h3>1️⃣ Clone the repo</h3>
-git clone https://github.com/yourname/flownexus.git
+git clone https://github.com/theBappy/flownexus.git
 cd flownexus
 
 <h3>2️⃣ Install dependencies</h3>
-pnpm install
+npm install
 
-<h3>3️⃣ Configure environment variables</h3>
-
-Copy:
-
-cp .env.example .env
-
-
-Fill:
-
-Neon Postgres URL
-
-Better Auth keys
-
-Polar API keys
-
-OpenAI / Claude / Gemini
-
-Sentry DSN
-
-Inngest keys
+<h3>3️⃣ Configure environment variables (fill necessary env. variables)</h3>
 
 <h3>4️⃣ Run dev server</h3>
-pnpm dev
+npm run dev:all
 
 <br/>
 <!-- Project Structure -->
 <h2>📁 Project Structure</h2>
-/app              → Next.js App Router
-/components       → UI Components
-/lib              → Utilities
-/server
-   /trpc          → Routers & procedures
-   /auth          → Better Auth config
-   /payments      → Polar integration
-/nodes            → Workflow Nodes
-/inngest          → Background Jobs
-/prisma           → DB schema + migrations
-/public           → Static files
+<table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; font-family: sans-serif; width: 100%;">
+
+  <tr style="background:#222; color:white;">
+    <th>Folder</th>
+    <th>Description</th>
+  </tr>
+
+  <tr style="background:#e8f1ff;">
+    <td>/app</td>
+    <td>Next.js App Router</td>
+  </tr>
+
+  <tr style="background:#e8ffed;">
+    <td>/components</td>
+    <td>UI Components</td>
+  </tr>
+
+  <tr style="background:#fff9db;">
+    <td>/lib</td>
+    <td>Utility functions & shared helpers</td>
+  </tr>
+
+  <tr style="background:#fff3e6;">
+    <td>/server</td>
+    <td>Server-side logic root</td>
+  </tr>
+
+  <tr style="background:#f3e8ff;">
+    <td>/server/trpc</td>
+    <td>tRPC routers & procedures</td>
+  </tr>
+
+  <tr style="background:#f7efe8;">
+    <td>/server/auth</td>
+    <td>Better Auth configuration</td>
+  </tr>
+
+  <tr style="background:#e8fff4;">
+    <td>/server/payments</td>
+    <td>Polar payments integration</td>
+  </tr>
+
+  <tr style="background:#e8f7ff;">
+    <td>/server/nodes</td>
+    <td>Workflow Nodes / HTTP Node Handlers</td>
+  </tr>
+
+  <tr style="background:#f3e8ff;">
+    <td>/server/inngest</td>
+    <td>Inngest background jobs</td>
+  </tr>
+
+  <tr style="background:#fcefe8;">
+    <td>/prisma</td>
+    <td>DB schema & migrations</td>
+  </tr>
+
+  <tr style="background:#f9f9f9;">
+    <td>/public</td>
+    <td>Static assets (images, icons, files)</td>
+  </tr>
+
+</table>
+
 
 <br/>
 <!-- Security -->
@@ -161,3 +241,4 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
