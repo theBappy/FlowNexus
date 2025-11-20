@@ -40,7 +40,7 @@ Manual triggers
 
 OpenAI
 
-Claude
+Anthropic
 
 Google Gemini
 
@@ -269,4 +269,5 @@ CodeRabbit for automated PR reviews
 Conventional commits
 
 Clean code requirements
+
 
