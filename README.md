@@ -1,172 +1,163 @@
-📁FlowNexus
+<!-- Title Section -->
+<h1 align="center">🚀 FlowNexus</h1> <p align="center"> <em>Where automation meets connection — your central nexus for effortless productivity.</em> </p> <br/>
+<!-- Description -->
+<h2>🔹 What is FlowNexus?</h2> <p> FlowNexus is an intelligent automation platform that connects your apps, data, and workflows into one unified ecosystem. With FlowNexus, anyone—from developers to full teams—can design, automate, and scale powerful workflows <strong>without writing complex code</strong>. </p> <br/>
+<!-- Tech Stack Icons -->
+<h2>🧱 Tech Stack</h2> <table> <tr> <td><img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Neon-0099FF?logo=neon&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/tRPC-2596BE?logo=trpc&logoColor=white"/></td> </tr> <tr> <td><img src="https://img.shields.io/badge/Inngest-0A0A0A?logo=inngest&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Polar-111111?logo=polar&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/React%20Flow-087EA4?logo=react&logoColor=white"/></td> </tr> <tr> <td><img src="https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Claude-A100FF?logo=anthropic&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Gemini-4285F4?logo=google&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Better%20Auth-000000"/></td> </tr> </table> <br/>
+<!-- Features Table -->
+<h2>✨ Features</h2> <table> <tr> <td>🔄 Visual workflow builder</td> <td>🎨 React Flow canvas</td> </tr> <tr> <td>🎯 Trigger nodes (Webhook, Google Form, Stripe, Manual)</td> <td>💬 Messaging nodes (Discord, Slack)</td> </tr> <tr> <td>🤖 AI integrations (OpenAI, Claude, Gemini)</td> <td>🌐 HTTP request node</td> </tr> <tr> <td>⚡ Background job execution (Inngest)</td> <td>💳 Polar payments & subscriptions</td> </tr> <tr> <td>🔐 Better Auth authentication</td> <td>🗄️ Prisma + Neon Postgres</td> </tr> <tr> <td>🔒 End-to-end type safety (TypeScript + tRPC)</td> <td>🐛 Sentry error tracking + AI monitoring</td> </tr> <tr> <td>🧑‍💻 CodeRabbit PR reviews</td> <td>🌐 Next.js 15 App Router</td> </tr> </table> <br/>
+<!-- Architecture Diagram -->
+<h2>🏗️ System Architecture</h2>
+flowchart LR
 
-FlowNexus is an intelligent automation platform that connects your apps, data, and workflows into one unified ecosystem. With FlowNexus, anyone—from developers to full teams—can design, automate, and scale powerful workflows without writing complex code.
+subgraph Client["🖥️ Client (Browser)"]
+    UI["Next.js UI"]
+    Canvas["React Flow Canvas"]
+    AuthUI["Better Auth UI"]
+end
 
-It’s where automation meets connection — your central nexus for effortless productivity.
+subgraph Frontend["🌐 Frontend"]
+    Actions["Server Actions"]
+    TRPCClient["tRPC Client"]
+end
 
-![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
-![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
-![Neon](https://img.shields.io/badge/Neon-0099FF?logo=neon&logoColor=white)
-![tRPC](https://img.shields.io/badge/tRPC-2596BE?logo=trpc&logoColor=white)
-![Inngest](https://img.shields.io/badge/Inngest-0A0A0A?logo=inngest&logoColor=white)
-![Polar](https://img.shields.io/badge/Polar-111111?logo=polar&logoColor=white)
-![Sentry](https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=white)
-![OpenAI](https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white)
-![Slack](https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white)
-![Discord](https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white)
-![React Flow](https://img.shields.io/badge/React%20Flow-087EA4?logo=react&logoColor=white)
+subgraph Backend["⚙️ Backend"]
+    TRPC["tRPC Router"]
+    Auth["Better Auth"]
+    Payments["Polar"]
+    Webhooks["Webhook Handlers"]
+    HTTPNode["HTTP Node Handler"]
+end
 
-🚀 Features
-🔄 Visual Workflow Builder
+subgraph AI["🤖 AI Providers"]
+    OpenAI["OpenAI"]
+    Claude["Claude"]
+    Gemini["Gemini"]
+end
 
-Drag-and-drop workflow creation
+subgraph Jobs["⚡ Inngest Jobs"]
+    Inngest["Inngest Functions"]
+end
 
-Powered by React Flow
+subgraph DB["🗄️ Database"]
+    Prisma["Prisma ORM"]
+    Neon["Neon Serverless Postgres"]
+end
 
-Custom nodes & real-time logic
+subgraph Monitoring["🔒 QA"]
+    Sentry["Sentry"]
+    CodeRabbit["CodeRabbit Reviews"]
+end
 
-🎯 Trigger Nodes
+Client --> UI --> Canvas
+Client --> AuthUI
 
-Webhook
+UI --> Actions
+UI --> TRPCClient --> TRPC
 
-Google Form
+Actions --> TRPC
+TRPC --> Auth
+TRPC --> Payments
+TRPC --> Webhooks
+TRPC --> HTTPNode
 
-Stripe
+TRPC --> Prisma --> Neon
 
-Manual triggers
+Webhooks --> Inngest
+Payments --> Inngest
+HTTPNode --> Inngest
 
-🤖 AI Integrations
+Inngest --> Prisma
+Inngest --> Neon
 
-OpenAI
+TRPC --> OpenAI
+TRPC --> Claude
+TRPC --> Gemini
 
-Anthropic
+Backend --> Sentry
+Frontend --> Sentry
+CodeRabbit -.-> Backend
 
-Google Gemini
+<br/>
+<!-- Getting Started -->
+<h2>📦 Getting Started</h2> <h3>1️⃣ Clone the repo</h3>
+git clone https://github.com/yourname/flownexus.git
+cd flownexus
 
-💬 Messaging Nodes
+<h3>2️⃣ Install dependencies</h3>
+pnpm install
 
-Slack
+<h3>3️⃣ Configure environment variables</h3>
 
-Discord
+Copy:
 
-🌐 HTTP Request Node
+cp .env.example .env
 
-Call any API
 
-Custom headers, params, body
+Fill:
 
-⚡ Background Job Execution
+Neon Postgres URL
 
-Reliable async processing with Inngest
+Better Auth keys
 
-Durable event-driven workflows
+Polar API keys
 
-💳 Payments & Subscriptions
+OpenAI / Claude / Gemini
 
-Built-in Polar integration
+Sentry DSN
 
-Subscription tiers, customer dashboard
+Inngest keys
 
-🔐 Authentication
+<h3>4️⃣ Run dev server</h3>
+pnpm dev
 
-Powered by Better Auth
+<br/>
+<!-- Project Structure -->
+<h2>📁 Project Structure</h2>
+/app              → Next.js App Router
+/components       → UI Components
+/lib              → Utilities
+/server
+   /trpc          → Routers & procedures
+   /auth          → Better Auth config
+   /payments      → Polar integration
+/nodes            → Workflow Nodes
+/inngest          → Background Jobs
+/prisma           → DB schema + migrations
+/public           → Static files
 
-Secure sessions, OAuth, email login
+<br/>
+<!-- Security -->
+<h2>🛡️ Security</h2>
 
-🗄️ Database Layer
+Session-based auth with Better Auth
 
-Prisma ORM
+Strict type safety
 
-Neon Serverless Postgres
+Environment-variable–isolated secrets
 
-Automatic scaling
+Sentry monitoring
 
-🔒 Type Safety
+Workflow audit history via Inngest events
 
-TypeScript
+<br/>
+<!-- License -->
+<h2>📄 License</h2>
 
-tRPC for end-to-end typing
+MIT License — free to use and modify.
 
-🐛 Monitoring
+<br/>
+<!-- Contributing -->
+<h2>🤝 Contributing</h2>
 
-Sentry for logs + performance
-
-AI insights for error analysis
-
-🧑‍💻 Developer Experience
+FlowNexus uses:
 
 CodeRabbit automated PR reviews
 
-Modular node system
-
-
-📦 Getting Started
-1. Clone the repository
-git clone https://github.com/theBappy/flownexus.git
-cd flownexus
-
-2. Install dependencies
-npm install
-
-3. Environment variables
-
-4. Run locally
-pnpm dev
-
-🧪 Development
-Tech Highlights
-
-Full stack type safety (TS + tRPC + Prisma)
-
-Modular node system for workflow steps
-
-Inngest for durable async execution
-
-Clean architecture with clear separation:
-UI → API → Workers → DB
-
-Recommended Workflow
-
-Add a new node → /nodes
-
-Add its worker logic → /inngest/functions
-
-Map it inside tRPC routers
-
-Test using local Inngest dev server
-
-Push → CodeRabbit reviews your PR
-
-
-🛡️ Security
-
-JWT-free, session-based authentication
-
-Secure storage of secrets via environment variables
-
-DB-level row validation
-
-Full audit trails through Inngest events
-
-Sentry monitoring for every API error
-
-📄 License
-
-MIT — you’re free to use, modify, distribute.
-
-❤️ Contributing
-
-PRs are welcome!
-The repo uses:
-
-CodeRabbit for automated PR reviews
-
 Conventional commits
 
-Clean code requirements
+Typed, modular code structure
 
+Contributions welcome!
 
-
-
-
+<br/><br/>
