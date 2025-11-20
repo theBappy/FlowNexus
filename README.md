@@ -6,7 +6,7 @@
 <h2>🧱 Tech Stack</h2> <table> <tr> <td><img src="https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Neon-0099FF?logo=neon&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/tRPC-2596BE?logo=trpc&logoColor=white"/></td> </tr> <tr> <td><img src="https://img.shields.io/badge/Inngest-0A0A0A?logo=inngest&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Polar-111111?logo=polar&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Sentry-362D59?logo=sentry&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/OpenAI-412991?logo=openai&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/React%20Flow-087EA4?logo=react&logoColor=white"/></td> </tr> <tr> <td><img src="https://img.shields.io/badge/Slack-4A154B?logo=slack&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Discord-5865F2?logo=discord&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Claude-A100FF?logo=anthropic&logoColor=white"/></td> <td><img src="https://img.shields.io/badge/Anthropic-000000?logo=anthropic&logoColor=white" />
 </td> <td><img src="https://img.shields.io/badge/Better%20Auth-000000"/></td> </tr> </table> <br/>
 <!-- Features Table -->
-<h2>✨ Features</h2> <table> <tr> <td>🔄 Visual workflow builder</td> <td>🎨 React Flow canvas</td> </tr> <tr> <td>🎯 Trigger nodes (Webhook, Google Form, Stripe, Manual)</td> <td>💬 Messaging nodes (Discord, Slack)</td> </tr> <tr> <td>🤖 AI integrations (OpenAI, Claude, Gemini)</td> <td>🌐 HTTP request node</td> </tr> <tr> <td>⚡ Background job execution (Inngest)</td> <td>💳 Polar payments & subscriptions</td> </tr> <tr> <td>🔐 Better Auth authentication</td> <td>🗄️ Prisma + Neon Postgres</td> </tr> <tr> <td>🔒 End-to-end type safety (TypeScript + tRPC)</td> <td>🐛 Sentry error tracking + AI monitoring</td> </tr> <tr> <td>🧑‍💻 CodeRabbit PR reviews</td> <td>🌐 Next.js 15 App Router</td> </tr> </table> <br/>
+<h2>✨ Features</h2> <table> <tr> <td>🔄 Visual workflow builder</td> <td>🎨 React Flow canvas</td> </tr> <tr> <td>🎯 Trigger nodes (Webhook, Google Form, Stripe, Manual)</td> <td>💬 Messaging nodes (Discord, Slack)</td> </tr> <tr> <td>🤖 AI integrations (OpenAI, Anthropic, Gemini)</td> <td>🌐 HTTP request node</td> </tr> <tr> <td>⚡ Background job execution (Inngest)</td> <td>💳 Polar payments & subscriptions</td> </tr> <tr> <td>🔐 Better Auth authentication</td> <td>🗄️ Prisma + Neon Postgres</td> </tr> <tr> <td>🔒 End-to-end type safety (TypeScript + tRPC)</td> <td>🐛 Sentry error tracking + AI monitoring</td> </tr> <tr> <td>🧑‍💻 CodeRabbit PR reviews</td> <td>🌐 Next.js 15 App Router</td> </tr> </table> <br/>
 
 <h2>👁‍🗨 Demo Preview  👁‍🗨</h2>
 [demo-recorder.webm](https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889)
@@ -252,6 +252,7 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
 
 
