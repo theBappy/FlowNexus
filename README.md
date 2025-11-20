@@ -14,7 +14,7 @@
 
 
 <h2>🏃‍♂️ Let's try yourself 🏃‍♂️</h2>
-[[demo-recorder.webm](https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889)](https://flow-nexus.vercel.app/)
+visit link:- https://flow-nexus.vercel.app
 
 
 <!-- Architecture Diagram -->
@@ -252,6 +252,7 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
 
 
