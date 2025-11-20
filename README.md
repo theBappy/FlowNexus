@@ -36,7 +36,7 @@ flowchart LR
 
   <tr style="background:#f3e8ff;">
     <td>🤖 AI Providers</td>
-    <td>- OpenAI<br>- Claude<br>- Gemini</td>
+    <td>- OpenAI<br>- Anthropic<br>- Gemini</td>
     <td>tRPC → AI Providers</td>
   </tr>
 
@@ -241,4 +241,5 @@ Typed, modular code structure
 Contributions welcome!
 
 <br/><br/>
+
 
