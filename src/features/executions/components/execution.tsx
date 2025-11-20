@@ -151,7 +151,7 @@ export const ExecutionView = ({ executionId }: { executionId: string }) => {
         {execution.output && (
           <div className="mt-6 p-4 bg-muted rounded-md">
             <p className="text-sm font-medium mb-2">Output</p>
-            <pre classNam="text-sm font-mono overflow-auto">
+            <pre className="text-sm font-mono overflow-auto">
               {JSON.stringify(execution.output, null, 2)}
             </pre>
           </div>
