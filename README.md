@@ -4,7 +4,6 @@ FlowNexus is an intelligent automation platform that connects your apps, data, a
 
 It’s where automation meets connection — your central nexus for effortless productivity.
 
-🏷️ Tech Stack Badges
 ![Next.js](https://img.shields.io/badge/Next.js-000000?logo=nextdotjs&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?logo=typescript&logoColor=white)
 ![Prisma](https://img.shields.io/badge/Prisma-2D3748?logo=prisma&logoColor=white)
@@ -270,3 +269,4 @@ CodeRabbit for automated PR reviews
 Conventional commits
 
 Clean code requirements
+
