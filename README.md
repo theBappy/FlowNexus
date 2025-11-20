@@ -100,80 +100,6 @@ CodeRabbit automated PR reviews
 
 Modular node system
 
-Clean monorepo structure
-
-🧩 System Architecture
-flowchart LR
-
-subgraph Client["🖥️ Client (Browser)"]
-    UI["Next.js 15 App Router UI"]
-    Canvas["React Flow Canvas"]
-    AuthUI["Better Auth UI Components"]
-end
-
-subgraph Frontend["🌐 Frontend (Next.js 15)"]
-    Actions["Server Actions"]
-    TRPCClient["tRPC Client"]
-end
-
-subgraph Backend["⚙️ Backend (Next.js Server)"]
-    TRPC["tRPC Router"]
-    Auth["Better Auth"]
-    Payments["Polar Integration"]
-    Webhooks["Webhook Handlers"]
-    HTTPNode["HTTP Request Node Handler"]
-end
-
-subgraph AI["🤖 AI Providers"]
-    OpenAI["OpenAI API"]
-    Claude["Claude API"]
-    Gemini["Google Gemini API"]
-end
-
-subgraph Jobs["⚡ Background Jobs"]
-    Inngest["Inngest Functions"]
-end
-
-subgraph DB["🗄️ Database Layer"]
-    Prisma["Prisma ORM"]
-    Neon["Neon Serverless Postgres"]
-end
-
-subgraph Monitoring["🔒 Monitoring & QA"]
-    Sentry["Sentry Error Tracking"]
-    CodeRabbit["CodeRabbit PR Reviews"]
-end
-
-
-%% Connections
-Client --> UI --> Canvas
-Client --> AuthUI
-
-UI --> Actions
-UI --> TRPCClient --> TRPC
-
-Actions --> TRPC
-TRPC --> Auth
-TRPC --> Payments
-TRPC --> Webhooks
-TRPC --> HTTPNode
-
-TRPC --> Prisma --> Neon
-
-Webhooks --> Inngest
-HTTPNode --> Inngest
-Payments --> Inngest
-
-Inngest --> Prisma
-Inngest --> Neon
-
-TRPC --> OpenAI
-TRPC --> Claude
-TRPC --> Gemini
-
-Backend --> Sentry
-Frontend --> Sentry
-CodeRabbit -. reviews PRs .-> Backend
 
 📦 Getting Started
 1. Clone the repository
@@ -212,7 +138,6 @@ Test using local Inngest dev server
 
 Push → CodeRabbit reviews your PR
 
-<img width="195" height="472" alt="Screenshot (34)" src="https://github.com/user-attachments/assets/3a754813-3080-483c-87b8-99e6d4e2e15f" />
 
 🛡️ Security
 
@@ -240,6 +165,7 @@ CodeRabbit for automated PR reviews
 Conventional commits
 
 Clean code requirements
+
 
 
 
