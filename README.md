@@ -1,4 +1,4 @@
-FlowNexus
+📁FlowNexus
 
 FlowNexus is an intelligent automation platform that connects your apps, data, and workflows into one unified ecosystem. With FlowNexus, anyone—from developers to full teams—can design, automate, and scale powerful workflows without writing complex code.
 
@@ -177,31 +177,13 @@ CodeRabbit -. reviews PRs .-> Backend
 
 📦 Getting Started
 1. Clone the repository
-git clone https://github.com/your-username/flownexus.git
+git clone https://github.com/theBappy/flownexus.git
 cd flownexus
 
 2. Install dependencies
-pnpm install
+npm install
 
 3. Environment variables
-
-Copy .env.example → .env and fill in:
-
-DATABASE_URL → Neon Postgres
-
-BETTER_AUTH_* keys
-
-POLAR_* keys
-
-OPENAI_API_KEY
-
-ANTHROPIC_API_KEY
-
-GOOGLE_GEMINI_API_KEY
-
-SENTRY_DSN
-
-INGEST_EVENT_KEY
 
 4. Run locally
 pnpm dev
@@ -230,19 +212,6 @@ Test using local Inngest dev server
 
 Push → CodeRabbit reviews your PR
 
-📁 Project Structure
-/app              # Next.js 15 App Router
-/components       # UI Components
-/lib              # Utilities & helpers
-/server
-   /trpc          # Routers + procedures
-   /auth          # Better Auth config
-   /payments      # Polar integration
-/nodes            # Workflow nodes
-/inngest          # Background jobs & events
-/prisma           # Schema + migrations
-/public           # Static assets
-
 🛡️ Security
 
 JWT-free, session-based authentication
@@ -269,5 +238,6 @@ CodeRabbit for automated PR reviews
 Conventional commits
 
 Clean code requirements
+
 
 
