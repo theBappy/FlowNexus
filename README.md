@@ -9,15 +9,12 @@
 </td> <td><img src="https://img.shields.io/badge/Better%20Auth-000000"/></td> </tr> </table> <br/>
 <!-- Features Table -->
 <h2>✨ Features</h2> <table> <tr> <td>🔄 Visual workflow builder</td> <td>🎨 React Flow canvas</td> </tr> <tr> <td>🎯 Trigger nodes (Webhook, Google Form, Stripe, Manual)</td> <td>💬 Messaging nodes (Discord, Slack)</td> </tr> <tr> <td>🤖 AI integrations (OpenAI, Anthropic, Gemini)</td> <td>🌐 HTTP request node</td> </tr> <tr> <td>⚡ Background job execution (Inngest)</td> <td>💳 Polar payments & subscriptions</td> </tr> <tr> <td>🔐 Better Auth authentication</td> <td>🗄️ Prisma + Neon Postgres</td> </tr> <tr> <td>🔒 End-to-end type safety (TypeScript + tRPC)</td> <td>🐛 Sentry error tracking + AI monitoring</td> </tr> <tr> <td>🧑‍💻 CodeRabbit PR reviews</td> <td>🌐 Next.js 15 App Router</td> </tr> </table> <br/>
-
-<h2>👁‍🗨 Demo Preview  👁‍🗨</h2>
-[demo-recorder.webm](https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889)
-<img width="643" height="309" alt="Screenshot (35)" src="https://github.com/user-attachments/assets/6336d1f0-ecae-4233-99de-9620475b6f31" />
-
+<!-- Demo Oreview -->
+👁‍🗨 Demo Preview:
+https://github.com/user-attachments/assets/1b62f3eb-aa46-4109-ab52-a91780410889
 
 <h2>🏃‍♂️ Let's try yourself 🏃‍♂️</h2>
 visit link:- https://flow-nexus.vercel.app
-
 
 <!-- Architecture Diagram -->
 <h2>🏗️ System Architecture</h2>
